@@ -22,7 +22,7 @@
                 break;
         }
     */
-
+/* 
     $numero = rand(1,10);
     $num=$numero%2;
     switch($num){
@@ -33,6 +33,28 @@
         echo "El numero $numero es impar";
         
     }
+*/
+//FORMA 1
+/* 
+    $n =rand(1,3);
+    $resultado=match($n){
+        1 =>"<p>el numero aleatorio es $n</p>",
+        2 =>"<p>el numero aleatorio es $n</p>",
+        3 =>"<p>el numero aleatorio es $n</p>"
+
+    };
+    echo $resultado;
+*/
+
+    //FORMA 2
+    $n =rand(1,3);
+    $resto=$n%2;
+    $resultado=match($resto){
+        0=>"<p>el numero aleatorio es par: $resto </p>",
+        1=>"<p>el numero aleatorio es par: $resto </p>"
+    };
+    echo $resultado;
+
         
     ?>
 </body>

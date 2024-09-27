@@ -7,9 +7,11 @@
 </head>
 <body>
     <?php
+    /* 
     $var=40;
     $var1=2;
     $var2=6;
+    */
     /* IF ELSE NORMAL
     if($var<$var2){//una manera de if
             echo "<p>El numero Mayor es: $var2 </p>";
@@ -30,6 +32,7 @@
 
         } 
         */
+        /*
         $numero=3;
         //Rangos: [-10,0),[0,10],(10,20]
         if ($numero>=-10 && $numero <0){
@@ -69,7 +72,16 @@
         else:
             echo "<p>Los numeros son iguales</p>";
         endif;
+*/
 
+//MATCH
+        $numero=rand(-10,20);
+        $resultado=match(true){
+            $numero >= -10 && $numero < 0 => "El numero $numero esta en el rango [-10,0)",
+            $numero >= 0 && $numero <= 10 => "El numero $numero esta en el rango [0,10)",
+            $numero > 10 && $numero <= 20 => "El numero $numero esta en el rango (10,20]"
+            
+        };
     ?>
 </body>
 </html>
